@@ -1,6 +1,6 @@
 # Today I Learned
 
-[![Version](https://img.shields.io/badge/version-2024.4.16-red.svg)](./CHANGELOG)  [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE)  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/zasfe/TIL)](https://hits.seeyoufarm.com/)
+![Version](https://img.shields.io/badge/version-2024.4.16-red.svg)  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/zasfe/TIL)](https://hits.seeyoufarm.com/)
 
 * 좋은 엔지니어가 되기 위해 하루동안 학습한 내용이나 기술관련 경험들을 기록으로 남긴다.
 
