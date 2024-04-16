@@ -22,4 +22,4 @@
 
 ### Automation
 
-
+  * [[2024.04.16] ansible 1일차 - wsl 로 환경 구성, ansible client 설정](./Automation/2024-04-16-ansible-setting-on-wsl.md)
