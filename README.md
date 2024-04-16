@@ -23,3 +23,9 @@
 ### Automation
 
   * [[2024.04.16] ansible 1일차 - wsl 로 환경 구성, ansible client 설정](./Automation/2024-04-16-ansible-setting-on-wsl.md)
+
+### Tip
+
+  * [[2024.04.16] github 에서 plantuml 사용하기.md](./Tip/2024-04-16-use-plantuml-on-github.md)
+
+
