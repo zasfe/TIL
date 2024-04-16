@@ -2,7 +2,7 @@
 
   * vagrant 사용시 오류가 빈번하여 wsl 로 환경 구성후 사용하도록 환경 구성을 변경했음
   * 교재: [[packtpub] Learning Ansible 2.7 - Third Edition](https://www.packtpub.com/product/learning-ansible-27-third-edition/9781789954333)
-  * 참고 코드: 
+  * 코드: https://github.com/PacktPublishing/Learning-Ansible-2.X-Third-Edition
 
 
 
