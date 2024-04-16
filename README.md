@@ -22,7 +22,8 @@
 
 ### Automation
 
-  * [[2024.04.16] ansible 1일차 - wsl 로 환경 구성, ansible client 설정](./Automation/2024-04-16-ansible-setting-on-wsl.md)
+  * [[2024.04.16] ansible 1일차 - wsl 로 환경 구성, ansible client 설정, 2장까지 ](./Automation/2024-04-16-ansible-setting-on-wsl.md)
+  * [[2024.04.17] ansible 2일차 - wsl 에서 centos7 이미지로 다수 컨테이너 환경 구성, 3장부터](./Automation/2024-04-17-3rd-centos7-setting-on-wsl.md)
 
 ### Tip
 
