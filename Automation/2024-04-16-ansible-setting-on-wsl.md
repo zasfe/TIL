@@ -21,11 +21,16 @@ $ sudo pip install ansible
 ## 테스트 환경 구성 - Container CentOS7 On WSL
   - vagrant 오동작으로 wsl에 CentOS7 컨테이너를 구동해서 사용함
   - 기본 centos7 컨테이너 이미지에 일부 네트워크 도구와 sshd-server 설치하고 vagrant 계정 설정함
+  - **Failed to get D-Bus connection: No such file or directory** 오류 방지를 위한 systemctl 교체함
 
 ```bash
 docker run -d --privileged --name centos7 centos:centos7 /usr/sbin/init
 cat <<EOF > ./centos7_vagrant
-yum install -y iproute net-tools sshd-server sudo;
+mv /usr/bin/systemctl /usr/bin/systemctl.old;
+curl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py > /usr/bin/systemctl;
+chmod +x /usr/bin/systemctl;
+yum install -y iproute net-tools openssh-server sudo;
+ssh-keygen -A;
 systemctl enable sshd; systemctl start sshd;
 sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 sed -i "s/#UseDNS no/UseDNS no/g" /etc/ssh/sshd_config
