@@ -71,5 +71,8 @@ if ! grep -q db01.fale.io "/etc/hosts"; then
 fi
 ```
 
-  * Update 2024.04.17
-    * 반복 설정해도 같은 결과가 나오도록 수정
+# Changelog
+
+## 2024-04-17
+
+  * 스크립트를 반복 설정해도 같은 결과가 나오도록 수정
