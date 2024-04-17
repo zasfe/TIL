@@ -1,5 +1,9 @@
 # [2024.04.17] ansible 2일차 - wsl 에서 다수 컨테이너 환경 구성
 
+  * 교재: Learning Ansible 2.7 - Third Edition [(packtpub)](https://www.packtpub.com/product/learning-ansible-27-third-edition/9781789954333) [(github)](https://github.com/PacktPublishing/Learning-Ansible-2.X-Third-Edition)
+
+
+
   * 3장은 테스트 서버 3개가 필요하여 세팅간 오류를 잡아서 시간이 많아 소모됨
   * CentOS7 사용하는 것은 순전히 기호.
   * 컨테이너를 사용하는 것은 굳이 서버까지 써야 할만큼 자원 사용량이 높지 않을 것으로 보여서.
