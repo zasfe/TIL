@@ -35,7 +35,7 @@ systemctl enable sshd; systemctl start sshd;
 sed -i "s/#UseDNS yes/UseDNS no/g" /etc/ssh/sshd_config
 sed -i "s/#UseDNS no/UseDNS no/g" /etc/ssh/sshd_config
 useradd vagrant
-echo "vagrant" \| passwd --stdin vagrant
+echo "vagrant" | passwd --stdin vagrant
 chmod u+w /etc/sudoers.d
 echo "vagrant        ALL=NOPASSWD:       ALL" >> /etc/sudoers.d/vagrant
 chmod u-w /etc/sudoers.d
