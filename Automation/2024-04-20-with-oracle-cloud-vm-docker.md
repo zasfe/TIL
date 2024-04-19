@@ -1,3 +1,5 @@
+# 2024-04-20-with-oracle-cloud-vm-docker.md
+
 # oracle vm + docker 상황에서 사용
 
 * 교재: Learning Ansible 2.7 - Third Edition [(packtpub)](https://www.packtpub.com/product/learning-ansible-27-third-edition/9781789954333) [(github)](https://github.com/PacktPublishing/Learning-Ansible-2.X-Third-Edition) - [(Chapter03)](https://subscription.packtpub.com/book/cloud-and-networking/9781789954333/5/ch05lvl1sec27/working-with-inventory-files)
@@ -5,10 +7,18 @@
 
 ## container 공통 설정 파일 생성 및 실행
 
-* 처음 ssh 접속할 때 known_host 등록 알림 방지용 옵션 추가 필요함 - %%-o StrictHostKeyChecking=no%%
+* 처음 ssh 접속할 때 known_host 등록 알림 방지용 옵션 추가 필요함
+  * `-o StrictHostKeyChecking=no`
 
 
 ```bash
+
+# create centos container 3 ea 
+docker run -d --privileged --name ws01 centos:centos7 /usr/sbin/init
+docker run -d --privileged --name ws02 centos:centos7 /usr/sbin/init
+docker run -d --privileged --name db01 centos:centos7 /usr/sbin/init
+
+# add vagrant setting 
 cat <<EOF > ./centos7_vagrant
 mv /usr/bin/systemctl /usr/bin/systemctl.old;
 curl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py > /usr/bin/systemctl;
@@ -42,3 +52,14 @@ sshpass -p vagrant ssh-copy-id -f -i ~/.ssh/id_rsa  -o StrictHostKeyChecking=no 
 sshpass -p vagrant ssh-copy-id -f -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no vagrant@`docker inspect -f "{{ .NetworkSettings.IPAddress }}" ws02`
 sshpass -p vagrant ssh-copy-id -f -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no vagrant@`docker inspect -f "{{ .NetworkSettings.IPAddress }}" db01`
 ```
+
+
+
+
+
+
+
+
+**여기까지 - 2024-04-20**
+
+https://subscription.packtpub.com/book/cloud-and-networking/9781789954333/5/ch05lvl1sec28/working-with-variables
